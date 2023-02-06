@@ -72,7 +72,7 @@ export default {
     async getAllEvents() {
       let result = await axios
         .get(
-          `http://localhost:3000/api/getEvents?startDate=${this.startDate}&endDate=${this.endDate}`
+          `https://appointment-high-level.onrender.com/api/getEvents?startDate=${this.startDate}&endDate=${this.endDate}`
         )
         .then((res) => {
           return res.data;

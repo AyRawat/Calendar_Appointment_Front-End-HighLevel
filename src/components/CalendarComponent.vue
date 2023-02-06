@@ -186,7 +186,7 @@ export default {
       let availableSlots = [];
       availableSlots = await axios
         .get(
-          `http://localhost:3000/api/slots?date=${date}&timezone=${timezone}`
+          `https://appointment-high-level.onrender.com/api/slots?date=${date}&timezone=${timezone}`
         )
         .then((response) => {
           return response.data;
@@ -231,7 +231,7 @@ export default {
         email: this.email,
       };
        await axios
-        .post("http://localhost:3000/api/createEvent", event)
+        .post("https://appointment-high-level.onrender.com/api/createEvent", event)
         .then((res) => {
           this.$bvToast.toast("Your slot has been successfully booked", {
             title: res.data.message,
